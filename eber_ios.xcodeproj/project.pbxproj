@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1F8CB6C41BA69D6200FFDED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CB6C31BA69D6200FFDED0 /* AppDelegate.swift */; };
-		1F8CB6C61BA69D6200FFDED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CB6C51BA69D6200FFDED0 /* ViewController.swift */; };
+		1F8CB6C61BA69D6200FFDED0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CB6C51BA69D6200FFDED0 /* SignUpViewController.swift */; };
 		1F8CB6C91BA69D6200FFDED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CB6C71BA69D6200FFDED0 /* Main.storyboard */; };
 		1F8CB6CB1BA69D6200FFDED0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CB6CA1BA69D6200FFDED0 /* Images.xcassets */; };
 		1F8CB6CE1BA69D6200FFDED0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F8CB6CC1BA69D6200FFDED0 /* LaunchScreen.xib */; };
 		1F8CB6DA1BA69D6200FFDED0 /* eber_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8CB6D91BA69D6200FFDED0 /* eber_iosTests.swift */; };
+		1F9E09B21BABE00000A6DE94 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */; };
+		1FBBF5CB1BADDB85000ED444 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBF5CA1BADDB85000ED444 /* UserInfo.swift */; settings = {ASSET_TAGS = (); }; };
+		1FBBF5CD1BAFD979000ED444 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBF5CC1BAFD979000ED444 /* SignInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		1F8CB6BE1BA69D6200FFDED0 /* eber_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eber_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8CB6C21BA69D6200FFDED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F8CB6C31BA69D6200FFDED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F8CB6C51BA69D6200FFDED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F8CB6C51BA69D6200FFDED0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F8CB6C81BA69D6200FFDED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F8CB6CA1BA69D6200FFDED0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1F8CB6CD1BA69D6200FFDED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1F8CB6D31BA69D6200FFDED0 /* eber_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eber_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8CB6D81BA69D6200FFDED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F8CB6D91BA69D6200FFDED0 /* eber_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eber_iosTests.swift; sourceTree = "<group>"; };
+		1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		1FBBF5CA1BADDB85000ED444 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		1FBBF5CC1BAFD979000ED444 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				1F8CB6C31BA69D6200FFDED0 /* AppDelegate.swift */,
-				1F8CB6C51BA69D6200FFDED0 /* ViewController.swift */,
 				1F8CB6C71BA69D6200FFDED0 /* Main.storyboard */,
+				1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */,
+				1FBBF5CA1BADDB85000ED444 /* UserInfo.swift */,
+				1FBBF5CC1BAFD979000ED444 /* SignInViewController.swift */,
+				1F8CB6C51BA69D6200FFDED0 /* SignUpViewController.swift */,
 				1F8CB6CA1BA69D6200FFDED0 /* Images.xcassets */,
 				1F8CB6CC1BA69D6200FFDED0 /* LaunchScreen.xib */,
 				1F8CB6C11BA69D6200FFDED0 /* Supporting Files */,
@@ -156,11 +165,14 @@
 		1F8CB6B61BA69D6200FFDED0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Huy;
 				TargetAttributes = {
 					1F8CB6BD1BA69D6200FFDED0 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Z6E8BKHU56;
 					};
 					1F8CB6D21BA69D6200FFDED0 = {
 						CreatedOnToolsVersion = 6.4;
@@ -212,7 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F8CB6C61BA69D6200FFDED0 /* ViewController.swift in Sources */,
+				1F8CB6C61BA69D6200FFDED0 /* SignUpViewController.swift in Sources */,
+				1F9E09B21BABE00000A6DE94 /* FirstScreenViewController.swift in Sources */,
+				1FBBF5CB1BADDB85000ED444 /* UserInfo.swift in Sources */,
+				1FBBF5CD1BAFD979000ED444 /* SignInViewController.swift in Sources */,
 				1F8CB6C41BA69D6200FFDED0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = eber_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = eber_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +426,7 @@
 				1F8CB6DF1BA69D6200FFDED0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F8CB6E01BA69D6200FFDED0 /* Build configuration list for PBXNativeTarget "eber_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +435,7 @@
 				1F8CB6E21BA69D6200FFDED0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
