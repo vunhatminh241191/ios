@@ -45,7 +45,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
-                                    <segue destination="Thp-b6-Uz5" kind="modal" id="1Gz-Jf-r2I"/>
+                                    <segue destination="Thp-b6-Uz5" kind="modal" id="9yA-GG-iFq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -225,6 +225,12 @@
                                     <constraint firstAttribute="height" constant="162" id="PQg-vt-Q2M"/>
                                 </constraints>
                             </pickerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKI-29-Xbf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Sign Up" id="zcM-be-R3l"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
