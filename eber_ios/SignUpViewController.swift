@@ -12,6 +12,9 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var usertype_array = ["patient","nurse"]
     //var email,password,phone: String!
     
+//    @IBAction func BackButton(sender: AnyObject) {
+//        navigationController!.presentingViewController!.dismissViewControllerAnimated(true, completion: {});
+//    }
     @IBAction func submit(sender: AnyObject) {
         let email = emailf.text
         let password = passwordf.text
@@ -39,6 +42,9 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.presentViewController(myAlert, animated: true, completion: nil)
         
     }
+    
+    //back button
+
     
     override func viewDidLoad() {
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mp0-YM-PTf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mp0-YM-PTf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -9,7 +9,7 @@
         <!--First Screen View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="FirstScreenViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstscreen" id="vXZ-lx-hvc" customClass="FirstScreenViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Si5-cz-EcY"/>
                         <viewControllerLayoutGuide type="bottom" id="1NB-QZ-ybL"/>
@@ -20,15 +20,32 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhG-Nn-mEQ">
                                 <rect key="frame" x="91" y="399" width="138" height="42"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.89350328950000002" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
-                                    <segue destination="CJJ-Wf-ZY2" kind="push" id="hJ6-a6-scY"/>
+                                    <segue destination="CJJ-Wf-ZY2" kind="push" id="B3s-w6-AtP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-4P-wBc">
+                                <rect key="frame" x="91" y="453" width="138" height="46"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.89350328947368429" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Nfd-PU-brU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="Sign up"/>
+                                <connections>
+                                    <segue destination="Thp-b6-Uz5" kind="modal" id="C2u-4n-hfY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-Dc-Bsb">
                                 <rect key="frame" x="16" y="206" width="288" height="47"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="1rk-fY-Fhp"/>
                                 </constraints>
@@ -36,20 +53,10 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-4P-wBc">
-                                <rect key="frame" x="91" y="453" width="138" height="46"/>
-                                <color key="backgroundColor" white="0.89350328947368429" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Nfd-PU-brU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                <state key="normal" title="Sign up"/>
-                                <connections>
-                                    <segue destination="Thp-b6-Uz5" kind="modal" id="9yA-GG-iFq"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="gBM-4P-wBc" firstAttribute="top" secondItem="UhG-Nn-mEQ" secondAttribute="bottom" constant="12" id="2R0-DN-BTe"/>
                             <constraint firstItem="gBM-4P-wBc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="75" id="9Hc-gs-ZDK"/>
@@ -71,7 +78,7 @@
         <!--SIGN IN-->
         <scene sceneID="4qR-HE-nkN">
             <objects>
-                <viewController id="CJJ-Wf-ZY2" customClass="SignInViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signin" id="CJJ-Wf-ZY2" customClass="SignInViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gex-zI-sli"/>
                         <viewControllerLayoutGuide type="bottom" id="eRi-Xn-hIw"/>
@@ -82,22 +89,26 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dSW-3A-bIg">
                                 <rect key="frame" x="16" y="178" width="288" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I50-RO-Tbs">
                                 <rect key="frame" x="16" y="221" width="288" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKU-bp-AYv">
                                 <rect key="frame" x="81" y="323" width="159" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Forgot your password?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juY-nl-ya4">
                                 <rect key="frame" x="133" y="284" width="55" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="uga-PL-c12"/>
@@ -112,6 +123,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bos-8X-ozq">
                                 <rect key="frame" x="81" y="85" width="159" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Connect with facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,7 +131,9 @@
                                 </state>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="juY-nl-ya4" secondAttribute="bottom" constant="254" id="BYy-Aa-lJ2"/>
                             <constraint firstItem="juY-nl-ya4" firstAttribute="top" secondItem="I50-RO-Tbs" secondAttribute="bottom" constant="33" id="LVi-13-vbx"/>
@@ -147,10 +161,41 @@
             </objects>
             <point key="canvasLocation" x="1179" y="675"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="dos-4Z-Rrd">
+            <objects>
+                <viewController id="4xb-Xv-7ga" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nj2-L6-b11"/>
+                        <viewControllerLayoutGuide type="bottom" id="nJw-Tf-hrB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3k5-CG-EBi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Main Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWA-yc-Zfk">
+                                <rect key="frame" x="107" y="273" width="107" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OWA-yc-Zfk" firstAttribute="centerX" secondItem="3k5-CG-EBi" secondAttribute="centerX" id="EUt-bN-amp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXM-Ee-KRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605" y="675"/>
+        </scene>
         <!--CREATE ACCOUNT-->
         <scene sceneID="1wQ-Gd-8pE">
             <objects>
-                <viewController id="Thp-b6-Uz5" customClass="SignUpViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signup" id="Thp-b6-Uz5" customClass="SignUpViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="isp-be-13i"/>
                         <viewControllerLayoutGuide type="bottom" id="C8F-qB-KdN"/>
@@ -161,21 +206,25 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BpR-OR-eGE">
                                 <rect key="frame" x="16" y="176" width="288" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tga-ff-faP">
                                 <rect key="frame" x="16" y="218" width="288" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zFg-Zk-Nfq">
                                 <rect key="frame" x="16" y="261" width="288" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rb-Gd-yz5">
                                 <rect key="frame" x="16" y="486" width="55" height="30"/>
+                                <animations/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="Nk1-Pe-MrS"/>
@@ -189,7 +238,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ub-Gh-pLE">
-                                <rect key="frame" x="81" y="87" width="159" height="26"/>
+                                <rect key="frame" x="81" y="115" width="159" height="26"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="yEn-xy-GX4"/>
@@ -201,6 +251,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Type: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pP-Kc-BHJ">
                                 <rect key="frame" x="16" y="326" width="77" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="PUE-RV-QTf"/>
                                     <constraint firstAttribute="height" constant="21" id="lDd-Te-65Y"/>
@@ -211,6 +262,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ3-Sd-j94">
                                 <rect key="frame" x="106" y="327" width="144" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="144" id="taN-if-d31"/>
                                 </constraints>
@@ -220,23 +272,29 @@
                             </label>
                             <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Xo-Tv-OYf">
                                 <rect key="frame" x="0.0" y="336" width="320" height="162"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="LoR-d5-kvq"/>
                                     <constraint firstAttribute="height" constant="162" id="PQg-vt-Q2M"/>
                                 </constraints>
                             </pickerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKI-29-Xbf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-0e-SS3">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <animations/>
                                 <items>
-                                    <navigationItem title="Sign Up" id="zcM-be-R3l"/>
+                                    <navigationItem title="Sign Up" id="Dq5-ya-pzy">
+                                        <barButtonItem key="backBarButtonItem" title="Cancel" id="m7a-or-ikY"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Tga-ff-faP" firstAttribute="leading" secondItem="9pP-Kc-BHJ" secondAttribute="leading" id="2dK-lD-h5z"/>
                             <constraint firstItem="Tga-ff-faP" firstAttribute="leading" secondItem="4Rb-Gd-yz5" secondAttribute="leading" id="4Hy-Vd-70e"/>
-                            <constraint firstItem="1ub-Gh-pLE" firstAttribute="top" secondItem="isp-be-13i" secondAttribute="bottom" constant="23" id="Bzi-N6-dtq"/>
+                            <constraint firstItem="1ub-Gh-pLE" firstAttribute="top" secondItem="isp-be-13i" secondAttribute="bottom" constant="50" id="Bzi-N6-dtq"/>
                             <constraint firstItem="1Xo-Tv-OYf" firstAttribute="leading" secondItem="4Rb-Gd-yz5" secondAttribute="trailing" constant="-71" id="Gug-45-yhD"/>
                             <constraint firstItem="gQ3-Sd-j94" firstAttribute="baseline" secondItem="9pP-Kc-BHJ" secondAttribute="baseline" id="JVd-gd-f9I"/>
                             <constraint firstAttribute="centerX" secondItem="zFg-Zk-Nfq" secondAttribute="centerX" id="Jpp-df-aqM"/>
@@ -272,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmc-o9-kg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1179" y="-27"/>
+            <point key="canvasLocation" x="1179" y="-45"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sV3-e1-I1n">
@@ -282,6 +340,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LfM-W9-haG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -13,8 +13,22 @@ class SignInViewController: UIViewController {
     @IBOutlet var passwordf: UITextField!
     @IBOutlet var emailf: UITextField!
     @IBAction func submit(sender: AnyObject) {
-        let email = emailf.text
-        let password = passwordf.text
+        let email = emailf.text! + " "
+        let password = " " + passwordf.text! + " "
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) [0] as String
+        let documentsDirectory = paths.stringByAppendingString("/UserInfo.txt")
+        var userinfo : String = String()
+        do{
+            userinfo = try String(contentsOfFile: documentsDirectory, encoding: NSUTF8StringEncoding)
+        }
+        catch{}
+        if userinfo.rangeOfString(email) != nil && userinfo.rangeOfString(password) != nil{
+            print("exists")
+        }
+        else{
+            print("invaled user")
+        }
+        
         
     }
     
