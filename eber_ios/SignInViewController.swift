@@ -28,8 +28,6 @@ class SignInViewController: UIViewController {
         else{
             print("invaled user")
         }
-        
-        
     }
     
     override func viewDidLoad() {
