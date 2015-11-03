@@ -1,8 +1,6 @@
 //
 //  FirstScreenViewController.swift
 //  eber_ios
-//
-//  Created by Dharmesh on 18/09/15.
 //  Copyright (c) 2015 Huy. All rights reserved.
 //
 

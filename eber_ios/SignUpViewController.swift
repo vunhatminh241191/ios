@@ -1,16 +1,17 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+
+class SignUpViewController: UIViewController{
     
     @IBOutlet var emailf: UITextField!
     @IBOutlet var passwordf: UITextField!
     @IBOutlet var phonef: UITextField!
-    @IBOutlet var Picker: UIPickerView!
-    @IBOutlet var usertypeLabel: UILabel!
+//    @IBOutlet var Picker: UIPickerView!
+//    @IBOutlet var usertypeLabel: UILabel!
     
-    var usertype_array = ["patient","nurse"]
-    //var email,password,phone: String!
+//    var usertype_array = ["patient","nurse"]
+
     
 //    @IBAction func BackButton(sender: AnyObject) {
 //        navigationController!.presentingViewController!.dismissViewControllerAnimated(true, completion: {});
@@ -30,8 +31,8 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         //check is passwords match
         
         //store data
-        let usertype = usertypeLabel.text
-        writeFile(email!, newpassword: password!, newphone: phone!, usertype: usertype!)
+//        let usertype = usertypeLabel.text
+        writeFile(email!, newpassword: password!, newphone: phone!)
         
         //display alert message with confirmation
         let myAlert = UIAlertController(title: "Alert", message: "Registration is successful. Thank you", preferredStyle: UIAlertControllerStyle.Alert)
@@ -43,16 +44,16 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
     }
     
-    //back button
+
 
     
     override func viewDidLoad() {
         
         // Do any additional setup after loading the view, typically from a nib.
         super.viewDidLoad()
-        Picker.dataSource = self
-        Picker.delegate = self
-        usertypeLabel.text = usertype_array[0] //THIS IS WHERE THE ERROR OCCURS
+//        Picker.dataSource = self
+//        Picker.delegate = self
+//        usertypeLabel.text = usertype_array[0]
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,22 +61,22 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Dispose of any resources that can be recreated.
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
-        return 1
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return usertype_array.count
-    }
-    
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
-        return usertype_array[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        let rowselected = usertype_array[row]
-        usertypeLabel.text = rowselected
-    }
+//    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
+//        return 1
+//    }
+//    
+//    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+//        return usertype_array.count
+//    }
+//    
+//    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?{
+//        return usertype_array[row]
+//    }
+//    
+//    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+//        let rowselected = usertype_array[row]
+//        usertypeLabel.text = rowselected
+//    }
     
     func displayAlert(userMessage:String){
         let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
@@ -84,11 +85,11 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.presentViewController(myAlert, animated: true, completion: nil)
     }
     
-    func writeFile(newemail: String, newpassword: String, newphone: String, usertype: String) {
+    func writeFile(newemail: String, newpassword: String, newphone: String) {
         
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) [0] as String
         let documentsDirectory = paths.stringByAppendingString("/UserInfo.txt")
-        let text = newemail + " , " + newpassword + " , " + newphone + " , " + usertype + "\n"
+        let text = newemail + " , " + newpassword + " , " + newphone + "\n"
         if let outputStream = NSOutputStream(toFileAtPath: documentsDirectory, append: true) {
             outputStream.open()
             outputStream.write(text)
