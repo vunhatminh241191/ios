@@ -28,10 +28,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         else{
             print("invaled user")
         }
-<<<<<<< HEAD
         
-=======
->>>>>>> e0000587d97bffae485c9db2e5d046279d436166
     }
     
     override func viewDidLoad() {
