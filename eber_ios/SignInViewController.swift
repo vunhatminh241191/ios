@@ -36,14 +36,18 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
+            self.returnUserData()
+
         }
         else
         {
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            let loginView = FBSDKLoginButton()
+            loginView.frame = CGRectMake(90, 100, 200, 30)
             self.view.addSubview(loginView)
-            loginView.center = self.view.center
+            //loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
+            self.returnUserData()
         }
         
 //        let loginButton = FBSDKLoginButton()
@@ -63,7 +67,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
-        
+        self.returnUserData()
         if ((error) != nil)
         {
             // Process error
@@ -87,7 +91,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func returnUserData()
     {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"id,email,name"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             if ((error) != nil)
@@ -100,8 +104,12 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
+                let id : NSString = result.valueForKey("id") as! NSString
+                print("Id is: \(id)")
+                if(result.valueForKey("email") != nil){
                 let userEmail : NSString = result.valueForKey("email") as! NSString
-                print("User Email is: \(userEmail)")
+                    print("User Email is: \(userEmail)")
+                }
             }
         })
     }

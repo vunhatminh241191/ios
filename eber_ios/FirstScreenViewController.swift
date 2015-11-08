@@ -10,7 +10,8 @@ class FirstScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let loginManager = FBSDKLoginManager()
+        loginManager.logOut()
         // Do any additional setup after loading the view.
     }
 

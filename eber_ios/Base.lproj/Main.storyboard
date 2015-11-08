@@ -133,15 +133,6 @@
                                     <action selector="submit:" destination="CJJ-Wf-ZY2" eventType="touchUpInside" id="H1g-dU-fLP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bos-8X-ozq">
-                                <rect key="frame" x="127" y="-3" width="159" height="30"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Connect with facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -151,12 +142,10 @@
                             <constraint firstItem="juY-nl-ya4" firstAttribute="top" secondItem="I50-RO-Tbs" secondAttribute="bottom" constant="33" id="LVi-13-vbx"/>
                             <constraint firstAttribute="centerX" secondItem="I50-RO-Tbs" secondAttribute="centerX" id="UuB-Qz-J3Q"/>
                             <constraint firstItem="I50-RO-Tbs" firstAttribute="top" secondItem="dSW-3A-bIg" secondAttribute="bottom" constant="13" id="Wc4-Bj-6T5"/>
-                            <constraint firstItem="dSW-3A-bIg" firstAttribute="top" secondItem="Bos-8X-ozq" secondAttribute="bottom" constant="63" id="Yed-QY-0I3"/>
                             <constraint firstItem="kKU-bp-AYv" firstAttribute="top" secondItem="juY-nl-ya4" secondAttribute="bottom" constant="9" id="baV-y1-2Bf"/>
                             <constraint firstAttribute="centerX" secondItem="juY-nl-ya4" secondAttribute="centerX" constant="-0.5" id="h6Z-3N-eNu"/>
                             <constraint firstAttribute="centerX" secondItem="kKU-bp-AYv" secondAttribute="centerX" constant="-0.5" id="mCo-dH-vBI"/>
                             <constraint firstItem="dSW-3A-bIg" firstAttribute="leading" secondItem="I50-RO-Tbs" secondAttribute="leading" id="q0D-0B-ace"/>
-                            <constraint firstAttribute="centerX" secondItem="Bos-8X-ozq" secondAttribute="centerX" constant="-0.5" id="uk5-Yc-N8m"/>
                             <constraint firstAttribute="centerX" secondItem="dSW-3A-bIg" secondAttribute="centerX" id="va8-yB-2mB"/>
                             <constraint firstItem="dSW-3A-bIg" firstAttribute="leading" secondItem="2Su-6T-2gw" secondAttribute="leadingMargin" id="ybx-B3-TmU"/>
                         </constraints>
