@@ -191,9 +191,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXM-Ee-KRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1605" y="675"/>
+            <point key="canvasLocation" x="1619" y="292"/>
         </scene>
-        <!--CREATE ACCOUNT-->
+        <!--Sign Up View Controller-->
         <scene sceneID="1wQ-Gd-8pE">
             <objects>
                 <viewController storyboardIdentifier="signup" id="Thp-b6-Uz5" customClass="SignUpViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,18 +223,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ub-Gh-pLE">
-                                <rect key="frame" x="107" y="115" width="159" height="26"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="yEn-xy-GX4"/>
-                                </constraints>
-                                <state key="normal" title="Connect with facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="feJ-0e-SS3">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <animations/>
@@ -272,18 +260,13 @@
                             <constraint firstItem="Tga-ff-faP" firstAttribute="top" secondItem="BpR-OR-eGE" secondAttribute="bottom" constant="12" id="e2K-6Z-bTF"/>
                             <constraint firstItem="C8F-qB-KdN" firstAttribute="top" secondItem="4Rb-Gd-yz5" secondAttribute="bottom" constant="8" symbolic="YES" id="eZL-Km-CfT"/>
                             <constraint firstItem="Tga-ff-faP" firstAttribute="leading" secondItem="zLZ-aO-J4p" secondAttribute="leadingMargin" id="ev3-Y8-xKP"/>
-                            <constraint firstItem="1ub-Gh-pLE" firstAttribute="top" secondItem="isp-be-13i" secondAttribute="bottom" constant="50" id="pjA-Hk-mCW"/>
                             <constraint firstItem="Tga-ff-faP" firstAttribute="leading" secondItem="zFg-Zk-Nfq" secondAttribute="leading" id="rck-pY-rjj"/>
                             <constraint firstAttribute="centerX" secondItem="BpR-OR-eGE" secondAttribute="centerX" id="s5n-aN-ggz"/>
                             <constraint firstItem="zFg-Zk-Nfq" firstAttribute="top" secondItem="Tga-ff-faP" secondAttribute="bottom" constant="13" id="tuh-LY-GfU"/>
-                            <constraint firstItem="Tga-ff-faP" firstAttribute="centerX" secondItem="1ub-Gh-pLE" secondAttribute="centerX" id="tv7-Wa-d12"/>
                             <constraint firstItem="Tga-ff-faP" firstAttribute="leading" secondItem="BpR-OR-eGE" secondAttribute="leading" id="tvi-ga-OBp"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="CREATE ACCOUNT" id="8qQ-Il-bkq">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="qEW-ad-arW"/>
-                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailf" destination="BpR-OR-eGE" id="iuO-7t-KJD"/>

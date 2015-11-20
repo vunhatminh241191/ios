@@ -49,13 +49,6 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
             loginView.delegate = self
             self.returnUserData()
         }
-        
-//        let loginButton = FBSDKLoginButton()
-//        loginButton.center = self.view.center;
-//        loginButton.readPermissions = ["email"]
-//        self.view.addSubview(loginButton)
-//        loginButton.delegate = self;
-
         // Do any additional setup after loading the view.
     }
 
