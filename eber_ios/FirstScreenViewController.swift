@@ -20,8 +20,15 @@ class FirstScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func SignInPressed(sender: AnyObject) {
+        let SignUpVC = self.storyboard?.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+        self.presentViewController(SignUpVC, animated: true, completion: nil)
+    }
     
-    
+    @IBAction func SignUpPressed(sender: AnyObject) {
+        let SignInVC = self.storyboard?.instantiateViewControllerWithIdentifier("signup") as! SignUpViewController
+        self.presentViewController(SignInVC, animated: true, completion: nil)
+    }
     
 
     /*

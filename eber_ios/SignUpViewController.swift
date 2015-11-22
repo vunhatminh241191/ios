@@ -11,11 +11,14 @@ class SignUpViewController: UIViewController, FBSDKLoginButtonDelegate{
 //    @IBOutlet var Picker: UIPickerView!
 //    @IBOutlet var usertypeLabel: UILabel!
 //    var usertype_array = ["patient","nurse"]
-
-    
 //    @IBAction func BackButton(sender: AnyObject) {
 //        navigationController!.presentingViewController!.dismissViewControllerAnimated(true, completion: {});
 //    }
+    @IBAction func BackToFS(sender: AnyObject) {
+        let FirstScreen = self.storyboard?.instantiateViewControllerWithIdentifier("firstscreen") as! FirstScreenViewController
+        self.presentViewController(FirstScreen, animated: true, completion: nil)
+    }
+
     @IBAction func submit(sender: AnyObject) {
         let email = emailf.text
         let password = passwordf.text

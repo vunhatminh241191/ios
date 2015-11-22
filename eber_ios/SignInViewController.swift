@@ -30,6 +30,10 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
     }
+    @IBAction func BackToFS(sender: AnyObject) {
+        let FirstScreen = self.storyboard?.instantiateViewControllerWithIdentifier("firstscreen") as! FirstScreenViewController
+        self.presentViewController(FirstScreen, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

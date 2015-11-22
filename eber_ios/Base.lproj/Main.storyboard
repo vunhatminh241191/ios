@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Wallpaper_001.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Oxa-lM-v0O">
-                                <rect key="frame" x="-94" y="63" width="508" height="256"/>
+                                <rect key="frame" x="-94" y="64" width="508" height="256"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Eber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-Dc-Bsb">
@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="0.11372549019607843" green="0.69019607843137254" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CJJ-Wf-ZY2" kind="push" id="B3s-w6-AtP"/>
+                                    <action selector="SignInPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hJk-rY-UA5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBM-4P-wBc">
@@ -55,6 +55,7 @@
                                     <color key="titleColor" red="0.11372549019607843" green="0.69019607843137254" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="SignUpPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Vm-IX-wxL"/>
                                     <segue destination="Thp-b6-Uz5" kind="modal" id="C2u-4n-hfY"/>
                                 </connections>
                             </button>
@@ -87,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="700" y="336"/>
         </scene>
-        <!--SIGN IN-->
+        <!--Sign In View Controller-->
         <scene sceneID="4qR-HE-nkN">
             <objects>
                 <viewController storyboardIdentifier="signin" id="CJJ-Wf-ZY2" customClass="SignInViewController" customModule="eber_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,30 +97,30 @@
                         <viewControllerLayoutGuide type="bottom" id="eRi-Xn-hIw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Su-6T-2gw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dSW-3A-bIg">
-                                <rect key="frame" x="16" y="90" width="288" height="30"/>
+                                <rect key="frame" x="16" y="178" width="288" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I50-RO-Tbs">
-                                <rect key="frame" x="16" y="133" width="288" height="30"/>
+                                <rect key="frame" x="16" y="221" width="288" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKU-bp-AYv">
-                                <rect key="frame" x="81" y="235" width="159" height="30"/>
+                                <rect key="frame" x="81" y="323" width="159" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Forgot your password?">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juY-nl-ya4">
-                                <rect key="frame" x="179" y="196" width="55" height="30"/>
+                                <rect key="frame" x="179" y="284" width="55" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -133,6 +134,19 @@
                                     <action selector="submit:" destination="CJJ-Wf-ZY2" eventType="touchUpInside" id="H1g-dU-fLP"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Rq-N3-cOy">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Sign In" id="8V7-I2-WcZ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="77k-Zb-UqO">
+                                            <connections>
+                                                <action selector="BackToFS:" destination="CJJ-Wf-ZY2" id="dtj-Z3-ymg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,9 +164,8 @@
                             <constraint firstItem="dSW-3A-bIg" firstAttribute="leading" secondItem="2Su-6T-2gw" secondAttribute="leadingMargin" id="ybx-B3-TmU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SIGN IN" id="TRs-op-yT9">
-                        <barButtonItem key="backBarButtonItem" title="Cancel" id="wrb-Xq-M3P"/>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailf" destination="dSW-3A-bIg" id="XnS-fQ-AtM"/>
                         <outlet property="passwordf" destination="I50-RO-Tbs" id="5rP-hq-lUM"/>
@@ -228,7 +241,11 @@
                                 <animations/>
                                 <items>
                                     <navigationItem title="Sign Up" id="Dq5-ya-pzy">
-                                        <barButtonItem key="backBarButtonItem" title="Cancel" id="m7a-or-ikY"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="C5a-Bf-eCm">
+                                            <connections>
+                                                <action selector="BackToFS:" destination="Thp-b6-Uz5" id="wVz-So-apS"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
