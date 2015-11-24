@@ -10,6 +10,7 @@ class FirstScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper001.png")!)
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
         // Do any additional setup after loading the view.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F533AE81C04407100D4DA0C /* wallpaper001.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F533AE71C04407100D4DA0C /* wallpaper001.png */; settings = {ASSET_TAGS = (); }; };
 		1F6E01291BE7F3BE00EDD93B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E01261BE7F3BE00EDD93B /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		1F6E012A1BE7F3BE00EDD93B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E01271BE7F3BE00EDD93B /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		1F6E012B1BE7F3BE00EDD93B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6E01281BE7F3BE00EDD93B /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F533AE71C04407100D4DA0C /* wallpaper001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wallpaper001.png; sourceTree = "<group>"; };
 		1F6E01261BE7F3BE00EDD93B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1F6E01271BE7F3BE00EDD93B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1F6E01281BE7F3BE00EDD93B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../Documents/FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				1FFA38FC1BE58B4600FEE4C3 /* Wallpaper_001.jpg */,
+				1F533AE71C04407100D4DA0C /* wallpaper001.png */,
 				1F8CB6C31BA69D6200FFDED0 /* AppDelegate.swift */,
 				1F8CB6C71BA69D6200FFDED0 /* Main.storyboard */,
 				1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					1F8CB6BD1BA69D6200FFDED0 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 824B7T4CNG;
 					};
 					1F8CB6D21BA69D6200FFDED0 = {
 						CreatedOnToolsVersion = 6.4;
@@ -226,6 +230,7 @@
 			files = (
 				1FFA38FD1BE58B4600FEE4C3 /* Wallpaper_001.jpg in Resources */,
 				1F8CB6C91BA69D6200FFDED0 /* Main.storyboard in Resources */,
+				1F533AE81C04407100D4DA0C /* wallpaper001.png in Resources */,
 				1F8CB6CE1BA69D6200FFDED0 /* LaunchScreen.xib in Resources */,
 				1F8CB6CB1BA69D6200FFDED0 /* Images.xcassets in Resources */,
 			);
@@ -390,7 +395,7 @@
 				INFOPLIST_FILE = eber_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eberhealth;
+				PRODUCT_BUNDLE_IDENTIFIER = "Eber-Health";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "eber_ios/Bridging-Header.h";
@@ -411,7 +416,7 @@
 				INFOPLIST_FILE = eber_ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = eberhealth;
+				PRODUCT_BUNDLE_IDENTIFIER = "Eber-Health";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "eber_ios/Bridging-Header.h";
