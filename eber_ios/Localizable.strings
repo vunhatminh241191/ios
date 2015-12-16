@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  eber_ios
+
+  Created by Minh Vu on 12/15/15.
+  Copyright © 2015 Huy. All rights reserved.
+*/
+
+"sign_up" = "http://test.eberhealth.com/user/sign_up/";
+"sign_in" = "http://test.eberhealth.com/user/sign_in/";
+"get_user" = "http://test.eberhealth.com/user/";
+"update_user" = "http://test.eberhealth.com/user/update_info/";
+"take_note" = "http://test.eberhealth.com/take_note/";
+"payment" = "http://test.eberhealth.com/payment/";
+"credit_card" = "http://test.eberhealth.com/credit_card/";
+"update_cc" = "http://test.eberhealth.com/credit_card_info/";
+"appointment" = "http://test.eberhealth.com/appointment/";
+"registered_appointment" = "http://test.eberhealth.com/registered_appointment/";
+"user_appointment" = "http://test.eberhealth.com/user_appointment/";
+
+"request_password" = "http://test.eberhealth.com/request_password/";
+"confirmation_password" = "http://test.eberhealth.com/confirmation_password/";
+"input_confirmation_code" = "http://test.eberhealth.com/input_confirmation_code/";
+"reset_password" = "http://test.eberhealth.com/reset_password/";
+"update_GPS" = "http://test.eberhealth.com/update_GPS/";
+"get_nurse_gps" = "http://test.eberhealth.com/get_nurse_gps/";
+"finding_on_call_appointment" = "http://test.eberhealth.com/finding_on_call_appointment/";
+"view_an_appointment" = "http://test.eberhealth.com/view_an_appointment/";
+"cancel_appointment" = "http://test.eberhealth.com/cancel_appointment/";
+"adding_payment_bill" = "http://test.eberhealth.com/adding_payment_bill/";
+"takenote_request" = "http://test.eberhealth.com/takenote_request/";
+"rating" = "http://test.eberhealth.com/rating/";
+"to_be_a_nurse" = "http://test.eberhealth.com/to_be_a_nurse/";
+"check_appointment" = "http://test.eberhealth.com/check_appointment/";
+
+"promotion_code" = "http://test.eberhealth.com/promotion_code/";
+
+"user_waiting_list" = "http://test.eberhealth.com/user_waiting_list/";
+
+// return string from server
+"1" = "Apparently, you have not signed up in our service. Please sign up!";
+"2" = "Username or password is not correct";

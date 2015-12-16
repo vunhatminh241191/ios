@@ -10,7 +10,7 @@ class FirstScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper001.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wallpaper001")!)
         let loginManager = FBSDKLoginManager()
         loginManager.logOut()
         // Do any additional setup after loading the view.
@@ -21,16 +21,16 @@ class FirstScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func SignInPressed(sender: AnyObject) {
-        let SignUpVC = self.storyboard?.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
-        self.presentViewController(SignUpVC, animated: true, completion: nil)
-    }
-    
-    @IBAction func SignUpPressed(sender: AnyObject) {
-        let SignInVC = self.storyboard?.instantiateViewControllerWithIdentifier("signup") as! SignUpViewController
-        self.presentViewController(SignInVC, animated: true, completion: nil)
-    }
-    
+//    @IBAction func SignInPressed(sender: AnyObject) {
+//        let SignUpVC = self.storyboard?.instantiateViewControllerWithIdentifier("signin") as! SignInViewController
+//        self.presentViewController(SignUpVC, animated: true, completion: nil)
+//    }
+//    
+//    @IBAction func SignUpPressed(sender: AnyObject) {
+//        let SignInVC = self.storyboard?.instantiateViewControllerWithIdentifier("signup") as! SignUpViewController
+//        self.presentViewController(SignInVC, animated: true, completion: nil)
+//    }
+//    
 
     /*
     // MARK: - Navigation
