@@ -16,6 +16,8 @@ class ServerPost{
         self.url_string = url
         self.data = data}
     
+    var data1: NSString!
+    
     func connection(completionHandler:(success:Bool, data: NSData?) -> Void){
         let url: NSURL = NSURL(string: self.url_string)!
         let request = NSMutableURLRequest(URL:url)
@@ -35,6 +37,7 @@ class ServerPost{
             }
             else {
                 if let unwrappedData = data {
+                    self.data1 = NSString(data: data!, encoding: NSUTF8StringEncoding)
                     completionHandler(success: true, data: unwrappedData)
                     return
                 }

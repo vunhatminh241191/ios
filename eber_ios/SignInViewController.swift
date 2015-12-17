@@ -8,12 +8,21 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
+protocol SignInViewControllerDelegate {
+    func didDoSomething(sender:SignInViewController)
+}
+
+
+class SignInViewController: UIViewController {
 
     @IBOutlet var passwordf: UITextField!
     @IBOutlet var emailf: UITextField!
     @IBOutlet var signin_title: UINavigationBar!
+    
+    var delegate: SignInViewControllerDelegate? = nil
+
     let user = User()
+    var data1 = ""
     
     /*@IBAction func submit(sender: AnyObject) {
         let email = emailf.text! + " "
@@ -40,7 +49,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (FBSDKAccessToken.currentAccessToken() != nil)
+        /*if (FBSDKAccessToken.currentAccessToken() != nil)
         {
             // User is already logged in, do work such as go to next view controller.
             self.returnUserData()
@@ -55,7 +64,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
             self.returnUserData()
-        }
+        }*/
         // Do any additional setup after loading the view.
         let rightButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "login")
         self.navigationItem.rightBarButtonItem = rightButton
@@ -71,7 +80,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     // login to facebook result
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    /*func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         self.returnUserData()
         if ((error) != nil)
@@ -118,7 +127,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                 }
             }
         })
-    }
+    }*/
     // ending login to facebook function
     
     // login to normal user accounts
@@ -141,26 +150,42 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                 if (success) {
                     if let unwrappedData = data {
                         if let responseString = String(data: unwrappedData, encoding: NSUTF8StringEncoding) {
-                            self.Type_Of_SignIn(responseString)
+                            self.data1 = responseString
+                            dispatch_async(dispatch_get_main_queue(), {
+                                // code here
+                                self.Type_Of_SignIn()
+//                                let alert = UIAlertController(title: "hi", message: "hello", preferredStyle: .Alert)
+//                                self.presentViewController(alert, animated: true, completion: nil)
+                            })
+
                         }
                     }
                 }
                 else { print("Failed") }
             }
+            
         }
     }
     
-    func Type_Of_SignIn(data: String){
+    func Type_Of_SignIn(){
         /*
         if (data.characters.count == 1){
-            if (data == "1"){
-                self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
-            }
+        
         }*/
-        if (data == NSLocalizedString("1", comment: "")){
+        print("hihihi")
+        print(self.data1)
+        if (self.data1 == "0"){
+            print("hehehe")
             self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
-            performSegueWithIdentifier("signup", sender: nil)}
-        else if (data == NSLocalizedString("2", comment: "")){
+            // hey delegate, some message, dissmiss me
+            delegate!.didDoSomething(self)
+            
+        //    performSegueWithIdentifier("signup", sender: nil)
+        }
+        if (self.data1 == NSLocalizedString("1", comment: "")){
+            self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")}
+            //performSegueWithIdentifier("signup", sender: nil)}
+        else if (self.data1 == NSLocalizedString("2", comment: "")){
             self.view.makeToast(message: NSLocalizedString("2", comment: ""), duration:2.0, position:"center")}
         
         
