@@ -17,6 +17,7 @@
 		1F9E09B21BABE00000A6DE94 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */; };
 		1FBBF5CB1BADDB85000ED444 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBF5CA1BADDB85000ED444 /* UserInfo.swift */; };
 		1FBBF5CD1BAFD979000ED444 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBBF5CC1BAFD979000ED444 /* SignInViewController.swift */; };
+		4C172C071C2381F900758340 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C172C061C2381F900758340 /* StartViewController.swift */; };
 		4C48466D1C2361DD00E17108 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48466C1C2361DD00E17108 /* SwiftyJSON.swift */; };
 		4C48466F1C2361F500E17108 /* HRToast+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48466E1C2361F500E17108 /* HRToast+UIView.swift */; };
 		C31F00C31C192C71009C4233 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F00C21C192C71009C4233 /* User.swift */; };
@@ -102,6 +103,7 @@
 		1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		1FBBF5CA1BADDB85000ED444 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		1FBBF5CC1BAFD979000ED444 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4C172C061C2381F900758340 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		4C48466C1C2361DD00E17108 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = "../../Downloads/SwiftyJSON-master/Source/SwiftyJSON.swift"; sourceTree = "<group>"; };
 		4C48466E1C2361F500E17108 /* HRToast+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HRToast+UIView.swift"; path = "../../Downloads/Toast-Swift-master/Toast/HRToast+UIView.swift"; sourceTree = "<group>"; };
 		4C4846701C23620200E17108 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = "../Downloads/SwiftyJSON-master/SwiftyJSON.xcodeproj"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				4C48466E1C2361F500E17108 /* HRToast+UIView.swift */,
 				1F8CB6C31BA69D6200FFDED0 /* AppDelegate.swift */,
 				1F8CB6C71BA69D6200FFDED0 /* Main.storyboard */,
+				4C172C061C2381F900758340 /* StartViewController.swift */,
 				1F9E09B11BABE00000A6DE94 /* FirstScreenViewController.swift */,
 				1FBBF5CC1BAFD979000ED444 /* SignInViewController.swift */,
 				1F8CB6C51BA69D6200FFDED0 /* SignUpViewController.swift */,
@@ -394,6 +397,7 @@
 				C31F00C31C192C71009C4233 /* User.swift in Sources */,
 				4C48466D1C2361DD00E17108 /* SwiftyJSON.swift in Sources */,
 				1FBBF5CB1BADDB85000ED444 /* UserInfo.swift in Sources */,
+				4C172C071C2381F900758340 /* StartViewController.swift in Sources */,
 				1FBBF5CD1BAFD979000ED444 /* SignInViewController.swift in Sources */,
 				1F8CB6C41BA69D6200FFDED0 /* AppDelegate.swift in Sources */,
 				4C48466F1C2361F500E17108 /* HRToast+UIView.swift in Sources */,

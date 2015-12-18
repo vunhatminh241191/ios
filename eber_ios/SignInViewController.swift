@@ -141,7 +141,13 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                 if (success) {
                     if let unwrappedData = data {
                         if let responseString = String(data: unwrappedData, encoding: NSUTF8StringEncoding) {
-                            self.Type_Of_SignIn(responseString)
+//                            self.Type_Of_SignIn(responseString)
+                            dispatch_async(dispatch_get_main_queue(), {
+                                // code here
+                            
+                            let alert = UIAlertController(title: "hi", message: "hello", preferredStyle: .Alert)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            })
                         }
                     }
                 }
@@ -157,6 +163,9 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
             }
         }*/
+        if (data == "0"){
+            self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
+        }
         if (data == NSLocalizedString("1", comment: "")){
             self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
             performSegueWithIdentifier("signup", sender: nil)}
