@@ -12,9 +12,12 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet var passwordf: UITextField!
     @IBOutlet var emailf: UITextField!
-    @IBAction func submit(sender: AnyObject) {
+    @IBOutlet var signin_title: UINavigationBar!
+    let user = User()
+    
+    /*@IBAction func submit(sender: AnyObject) {
         let email = emailf.text! + " "
-        let password = " " + passwordf.text! + " "
+        let password = " " + password_text_field.text! + " "
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) [0] as String
         let documentsDirectory = paths.stringByAppendingString("/UserInfo.txt")
         var userinfo : String = String()
@@ -26,10 +29,10 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("exists")
         }
         else{
-            print("invaled user")
+            print("invalid user")
         }
         
-    }
+    }*/
     @IBAction func BackToFS(sender: AnyObject) {
         let FirstScreen = self.storyboard?.instantiateViewControllerWithIdentifier("firstscreen") as! FirstScreenViewController
         self.presentViewController(FirstScreen, animated: true, completion: nil)
@@ -54,6 +57,12 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.returnUserData()
         }
         // Do any additional setup after loading the view.
+        let rightButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "login")
+        self.navigationItem.rightBarButtonItem = rightButton
+        
+        let leftButton = UIBarButtonItem(title:"Back", style: .Plain, target:self, action: "moving_back")
+        self.navigationItem.leftBarButtonItem = leftButton
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,7 +70,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // login to facebook result
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
         self.returnUserData()
@@ -110,6 +119,63 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
         })
     }
+    // ending login to facebook function
+    
+    // login to normal user accounts
+    func login() {
+        let email_text = emailf.text!
+        let password_text = passwordf.text!
+        
+        if (password_text.isEmpty || password_text.isEmpty){
+            self.view.makeToast(message: "Please input your missing string", duration: 2.0, position: "center")
+            return}
+        
+        if (user.isvalidateEmail(email_text) == false){
+            self.view.makeToast(message: "Your email input type does not correct", duration: 2.0, position: "center")
+            return}
+        
+        else {
+            let info = ["email":email_text, "password":password_text]
+            let server_login = ServerPost(url: NSLocalizedString("sign_in", comment: ""), data: info)
+            server_login.connection{(success, data)-> Void in
+                if (success) {
+                    if let unwrappedData = data {
+                        if let responseString = String(data: unwrappedData, encoding: NSUTF8StringEncoding) {
+//                            self.Type_Of_SignIn(responseString)
+                            dispatch_async(dispatch_get_main_queue(), {
+                                // code here
+                            
+                            let alert = UIAlertController(title: "hi", message: "hello", preferredStyle: .Alert)
+                            self.presentViewController(alert, animated: true, completion: nil)
+                            })
+                        }
+                    }
+                }
+                else { print("Failed") }
+            }
+        }
+    }
+    
+    func Type_Of_SignIn(data: String){
+        /*
+        if (data.characters.count == 1){
+            if (data == "1"){
+                self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
+            }
+        }*/
+        if (data == "0"){
+            self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
+        }
+        if (data == NSLocalizedString("1", comment: "")){
+            self.view.makeToast(message: NSLocalizedString("1", comment: ""), duration:2.0, position:"center")
+            performSegueWithIdentifier("signup", sender: nil)}
+        else if (data == NSLocalizedString("2", comment: "")){
+            self.view.makeToast(message: NSLocalizedString("2", comment: ""), duration:2.0, position:"center")}
+        
+        
+        
+    }
+    
     
     /*
     // MARK: - Navigation
